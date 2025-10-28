@@ -1,11 +1,13 @@
 import express, { Request, Response } from "express";
+import { join } from "path";
 
 const app = express();
 const PORT = 3000;
 app.use(express.json());
+app.use(express.static(join(__dirname, "../public")));
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to the Chat App!");
+  res.sendFile(join(__dirname, "public", "index.html"));
 });
 
 app.listen(PORT, () => {
