@@ -1,0 +1,19 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "_version": "20.1.0",
+
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
