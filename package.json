@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest test",
-    "dev": "nodemon --config nodemon.json --exec ts-node src/index.ts",
+    "dev": "nodemon --config nodemon.json src/index.ts",
+    "dev:debug": "nodemon --config nodemon.json --inspect-brk src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
@@ -20,11 +21,11 @@
     "@tsconfig/node20": "^20.1.6",
     "@types/express": "^5.0.5",
     "@types/node": "^24.9.1",
+    "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "express": "^5.1.0"
   }
 }

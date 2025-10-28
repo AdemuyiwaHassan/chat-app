@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.static(join(__dirname, "../public")));
 
 app.get("/", (req: Request, res: Response) => {
-  res.sendFile(join(__dirname, "public", "index.html"));
+  res.send("Hello, World!!");
 });
 
 app.listen(PORT, () => {
